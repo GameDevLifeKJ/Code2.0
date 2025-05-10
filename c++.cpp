@@ -67,14 +67,15 @@ int main()
 //'이름과 나이' 예제를  실행해보고 나이를 개월수로 출력하도록 바꾸기
 //입력을 연단위로 받은후에 12를 곱한다 (* 연산자 이용.)
 //다른 다섯 살짜리보다 5~6 개월 일찍 태어난 사실을 자랑으로 여기는 어린이를 고려해서 
-// 나이르 double 타입으로 받는다
+// 나이를 double 타입으로 받는다
 
 int main()
 {
-    cout << " 어린친구 나이랑 이름을 좀 알려줄래요?";
+    cout << " 어린친구 이름이랑 개월수를 좀 알려줄래요?";
     string first_name = "???";          //문자열 변수
-    int age = -1;
+    double age = -1;
+    double age_in_months = age * 12;
     cin >> first_name >> age;           //문자열을 읽은후 정수를 읽음
-    cout << "안녕하세요," << first_name << "(나이" << age << ")\n";
-
+    cout << "안녕하세요," << first_name << "(나이" << age_in_months / 12  << ")\n";
+    //다시 풀어야 함 5/10 
 }
