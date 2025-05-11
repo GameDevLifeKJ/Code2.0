@@ -61,7 +61,7 @@ int main()
 
 }
 
-*/
+
 
 //이름과 나이읽기 도전과제 
 //'이름과 나이' 예제를  실행해보고 나이를 개월수로 출력하도록 바꾸기
@@ -77,5 +77,84 @@ int main()
     double age_in_months = age * 12;
     cin >> first_name >> age;           //문자열을 읽은후 정수를 읽음
     cout << "안녕하세요," << first_name << "(나이" << age_in_months / 12  << ")\n";
-    //다시 풀어야 함 5/10 
+}
+
+
+//간단한 연산자 실습용 프로그램
+int main()
+{
+    cout << "부동소수점 값 입력:";
+    double n;
+    cin >> n;
+    cout << "n == " << n
+    <<"\nn+1 ==" << n+1
+    <<"\n3 곱하기 n ==" << 3*n
+    <<"\nn의 두배 ==" <<n+n
+    <<"\nn 제곱== " << n*n
+    <<"\nn 나누기 2 ==" << n/2
+    <<"\nn의 제곱근 ==" << sqrt(n)
+    <<'\n'; //출력에서 개행문자("행의 끝")을 뜻하는 특수문자
+}
+
+
+//도전과제 double이 아닌 int를 읽어오도록 고쳐보자/ int 에 대해 sqrt() 가 정의되지 않았으므로, n을 double에 대입해 sqrt()를 적용해야 한다. 더 나아가 다른 연산자도
+//연습해보자. int에서 /는 정수 나눗셈이고 %는 나머지 연산임을 기억하자. 즉 5/2 는 (2.5나 3이 아닌) 2이고, 5%2는 1이다. 
+//정수에 대한 *와 /, %정의에 따르면 두양의 int a와 b에 대해  a/b * b + a%b == a는 항상 참이다.
+
+int main()
+{
+    cout << "부동소수점 값 입력:";
+    int n;
+    cin >> n;
+    cout << "n == " << n
+    <<"\nn+1 ==" << n+1
+    <<"\n3 곱하기 n ==" << 3*n
+    <<"\nn의 두배 ==" <<n+n
+    <<"\nn 제곱== " << n*n
+    <<"\nn 나누기 2 ==" << n/2
+    <<"\nn의 제곱근 ==" << sqrt(n)
+    <<'\n'; //출력에서 개행문자("행의 끝")을 뜻하는 특수문자
+}
+
+
+//성과 이름 읽기 
+ int main()
+ {
+    cout << "성과 이름을 입력하세요 \n";
+    string first;
+    string second;
+    cin >> first >> second;             //두 문자열 읽기 
+    string name = first + second;       //두 문자열 연결
+    cout << "안녕하세요," << name <<'\n';
+ }
+
+ 
+
+ //이름을 읽고 비교 
+ int main()
+ {
+    cout << "이름을 두개 입력하세요 \n";
+    string first;
+    string second;
+    cin >> first >> second; //두문자열 읽기 
+    if (first == second) cout <<"두이름이 같습니다\n";
+    if (first < second)
+        cout << first << "가 알파벳순으로 더 앞에 위치함:" << second <<'\n';
+    if (first > second)
+        cout << first << "알파벳순으로 더 뒤에 위치함:" << second << '\n';
+}
+
+*/
+
+//반복되는 이름 찾기 
+int main ()
+{
+    string previous = " ";          //이전 단어. '단어가 아님'을 나타내는 값으로 초기화
+    string current;                 //현재 단어
+    while (cin >> current)          //스트림에서 단어를 읽음
+    {                               
+        if (previous == current)    //현재 단어와 마지막 단어가 같은지 검사
+            cout << "반복된 단어: " << current << '\n';
+        previous = current;
+    }
 }
