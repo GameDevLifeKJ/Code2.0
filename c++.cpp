@@ -262,7 +262,7 @@ int main ()
 Third edition도 나왔다는데 그건 분량이 절반으로 줄고 초보를 위한내용들이 싹 편집되어서 이거 다읽고
 Third 사서 최신부분만 확인해봐야 할듯
 
-*/ 
+
 
 int main()
 {
@@ -317,9 +317,42 @@ int main()
     return 0;
 }
 
+
+
 //다음번에 다시한번 안보고 코딩 해볼것 
 
 //연습문제 2.마일을 킬로미터로 변환 하는 프로그램을 작성하기, hint 1마일은 1.609킬로미터다
+
+int main()
+{
+    int number =1;
+    double miles = 1;
+    double kilometer = 1.609;
+    cout << "아무숫자나 입력해 주세요:\n";
+    cin >> number ;
+    cout << number << "는" << number *  kilometer << "입니다!";
+}
+
+*/
+
+int main() {
+    double mile;                              // 사용자로부터 입력받을 마일 값
+    const double mileToKilometer = 1.609;       // 1마일 당 킬로미터 변환 상수
+
+    cout << "마일 값을 입력하세요: ";
+    if (!(cin >> mile)) {                       // 입력값 검증
+        cerr << "입력 형식 오류입니다." << endl;
+        return 1;
+    }
+    
+    double kilometers = mile * mileToKilometer;
+
+    cout << mile << " 마일은 " << kilometers << " 킬로미터 입니다." << endl;
+
+    return 0;
+}
+
+
 //연습문제 3.아무일도 하지않고 합법적인 이름과 그렇지 않은 이름 (예 int double = 0;)으로 변수를 몇개 선언하는 프로그램을 만들자.
 //연습문제 4.사용자에게 두정수값을 입력하라는 프롬프트를 출력하고. 이값을 val1, val2라는 int변수에 저장하자. 그리고 이둘의
 //더작은 값, 큰 값, 둘의 합, 차, 곱, 비율을 구해서 출력하자.
