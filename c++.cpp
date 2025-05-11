@@ -144,7 +144,7 @@ int main()
         cout << first << "알파벳순으로 더 뒤에 위치함:" << second << '\n';
 }
 
-*/
+
 
 //반복되는 이름 찾기 
 int main ()
@@ -156,5 +156,62 @@ int main ()
         if (previous == current)    //현재 단어와 마지막 단어가 같은지 검사
             cout << "반복된 단어: " << current << '\n';
         previous = current;
+    }
+}
+
+
+
+//반복되는 이름 찾기 2.0
+int main ()
+{
+    int number_of_words = 0;
+    string previous = " ";          //이전 단어. '단어가 아님'을 나타내는 값으로 초기화
+    string current;                 //현재 단어
+    while (cin >> current)          //스트림에서 단어를 읽음
+    {   
+        ++number_of_words;                              
+        if (previous == current)    //현재 단어와 마지막 단어가 같은지 검사
+            cout << number_of_words << "번 반복되었습니다"
+                 << "반복된 단어: " << current << '\n';
+        previous = current;
+    }
+}
+
+
+
+int main ()
+{
+    double x;               //초기화를 되지 않았으므로 x의 값은 정의되지 않음
+    double y = x;           //y의 값도 정의되지 않음
+    double z = 2.0+x;       //+의 의미도 정의되지 않았으므로, z의값도 알수없음
+}
+
+
+
+int main()
+{
+    int a = 20000;
+    char c = a;     //큰 int를 작은 char에 우겨넣으려고 시도 
+    int b = c;
+    if (a !=b)
+        cout << "이런!:" << a << "!=" << b << '\n';
+    else
+        cout << "우와! 문자가 엄청 크네요.\n";
+}
+
+*/
+
+int main ()
+{
+    double d = 0;
+    while (cin >>d)     //숫자를 입력받는동안 아래 구문을 반복 
+    {
+        int i = d;      //double을 int로 축소 변환 
+        char c = i;     //int를 char로 축소 변환
+        int i2 = c;     //문자의 정수표현을 대입 
+        cout << "d=="  << d 
+             << "i=="  << i
+             << "i2==" <<i2
+             <<"char(" << c <<")\n";
     }
 }
