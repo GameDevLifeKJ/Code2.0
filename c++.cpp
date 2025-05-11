@@ -199,7 +199,7 @@ int main()
         cout << "우와! 문자가 엄청 크네요.\n";
 }
 
-*/
+
 
 int main ()
 {
@@ -214,4 +214,46 @@ int main ()
              << "i2==" <<i2
              <<"char(" << c <<")\n";
     }
+}
+
+*/
+
+int main ()
+{
+
+    string first_name = "???";
+    string second_name = "???";
+    string friends_name = "???";
+    char friends_sex;
+
+
+    cout << "이름을 입력해주세요 :";
+
+    cin >> first_name;
+    if (first_name != "???")
+    {
+        cout<< "잘지내시죠?\n" + first_name;
+        cout << "편지를 받을 사람의 이름을 알려주세요 : \n";
+        cin >> second_name;
+    }
+
+    if (second_name != "???")
+    {
+        cout << "친애하는" << first_name << "잘 지내시죠? 저는 잘지냅니다. 보고싶군요\n"; 
+        cout << "다른 친구의 이름과 성을 입력해주세요 : \n";
+        cin >> friends_name >> friends_sex;
+    }
+
+    
+    if (friends_sex == f)
+    {
+        cout << friends_name << "을 보시거든 그녀에게 저한테 전화좀 해달라고 전해주세요";
+    }
+
+    if(friends_sex ==m)
+    {
+        cout << friends_name << "을 보시거든 그에게 저한테 전화좀 해달라고 전해주세요";
+    }
+
+    
 }
