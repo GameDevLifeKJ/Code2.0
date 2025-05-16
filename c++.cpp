@@ -535,7 +535,7 @@ int main() {
 
     return 0;
 }
- */
+
 
 //10다음과 같이 연산자와 두 피연산자를 입력받아 결과를 출력하는 프로그램을 작성하자.
 // +100 3.14
@@ -543,7 +543,60 @@ int main() {
 //연산자를 operation 이라는 문자열 변수에 대입하고, if (operation 이라는 문자열 변수에 대입하고,
 //if (operation =="+") 와 같은 if 문으로 사용자가 어떤 연산을 원하는지 가려내자. 두 피연산자는 double 
 //타입변수에 저장하고, +와 -,*,/,plus,minus,mul,div등의 연산을 의미에 맞게 구현하자. 
+
+int main()
+{
+    string operation;
+    double va1, va2;
+
+    //연산자와 피연산자를 입력받기
+    cin >> operation >> va1 >> va2;
+
+    //연산 수행
+    if (operation == "+" || operation == "plus") {cout << va1 + va2;}
+    else if (operation == "-" || operation == "minus") {cout << va1 + va2;}
+    else if (operation == "*" || operation == "mul") {cout << va1 * va2;}
+    else if (operation == "/" || operation == "div") 
+    {
+        if (va2 != 0)
+        cout << va1 / va2;
+        else cout << "Error" << endl;
+    }
+    return 0;
+}
+
+*/
+
 //11페니(1센트)와 니켈(5센트), 다임(10센트), 쿼터(25센트), 하프달러(50센트), 달러 (100센트) 개수를
 //입력하라는 프롬프트를 출력하는 프로그램을 작성하자. "몇 페니를 가지고 계세요?"처럼 각 단위의 
 //동전개수를 따로 물어봐야 한다. 그후에 다음과 같이 출력해야 한다. 
 // you have 23 pennies. you have 17 nickles. 등등
+
+int main ()
+{
+    int penny = 0, nickel = 0, dime = 0, quarter = 0, halfDollar = 0, dollar = 0;
+    cout << "How many pennies do you have?" << endl; 
+    cin >> penny;
+
+    cout << "How many nickels do you have?" << endl; 
+    cin >> nickel;
+
+    cout << "How many dimes do you have?" << endl; 
+    cin >> dime;
+
+    cout << "How many quarters do you have?" << endl; 
+    cin >> quarter;
+
+    cout << "How many half dollars do you have?" << endl; 
+    cin >> halfDollar;
+
+    cout << "How many dollars do you have?" << endl; 
+    cin >> dollar;
+
+    cout << "You have " << penny << " pennies." << endl;
+    cout << "You have " << nickel << " nickels." << endl;
+    cout << "You have " << dime << " dimes." << endl;
+    cout << "You have " << quarter << " quarters." << endl;
+    cout << "You have " << halfDollar << " half dollars." << endl;
+    cout << "You have " << dollar << " dollars." << endl;
+}
