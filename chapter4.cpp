@@ -56,7 +56,9 @@ int main() {
 
 
 //Switch 구문을 활용한 앞예시 바꾸기
+/*
 int main()
+
 {
     constexpr double cm_per_inch = 2.54;        //인치당 센티미터
     double length = 1;                          //인치나 센티미터 단위의 길이
@@ -76,3 +78,78 @@ int main()
         break;
     }
 }
+    */
+
+
+//여러 케이스를 한구문에 지정할수있다
+/*
+int main ()
+{
+    cout << "숫자를 입력하세요\n";
+    char a;
+    cin >> a;
+    switch(a) 
+    {
+        case'0':case'2':case'4':case'6':case'8':
+            cout << "은 짝수\n";
+            break;
+        case'1':case'3':case'5':case'7':case'9':
+            cout << "은 홀수\n";
+            break;
+        default:
+            cout << "은 숫자가 아님\n";
+            break;
+    }
+    return 0;
+}
+*/
+
+//나쁜코드의 예  (break 누락)
+/*
+int main()
+{
+    constexpr double cm_per_inch = 2.54;        //인치당 센티미터
+    double length = 1;                          //인치나 센티미터 단위의 길이
+    char unit = 'a';
+    cout <<"길이 뒤에 단위를 지정하세요 (c나i):\n";
+    cin>>length>>unit;
+    switch (unit) {
+        case 'i':
+            cout << length << "in ==" << cm_per_inch*length << "cm\n";
+            break;
+        case 'c':
+            cout<<length<<"cm =="<<length/cm_per_inch<<"in\n";
+            break;
+    }
+}
+    */
+
+//도전과제 switch 구문을 이용해서 다시작성하고 위안과 크로네도 추가하기 
+/*
+int main()
+{
+    constexpr double JPY = 145.91;
+    constexpr double EUR = 1.1146;
+    constexpr double GBP = 1.3271;
+    constexpr double CNY = 7.23;
+    constexpr double NOK = 10.45;
+    double USD;
+    char u;
+
+    cout << "USD를 (JPY,EUR,GBP,CNY,NOK)중 어느나라돈으로 얼만큼 환전하시겠습니까?\n";
+    cin >> USD >> u;
+
+    switch (u)
+    {
+        case'j': cout << USD << " USD는 " << USD * JPY << " JPY입니다.\n"; break;
+        case'e': cout << USD << " USD는 " << USD * EUR << " EUR입니다.\n"; break;
+        case'g': cout << USD << " USD는 " << USD * GBP << " GBP입니다.\n"; break;
+        case'c': cout << USD << " USD는 " << USD * CNY << " CNY입니다.\n"; break;
+        case'n': cout << USD << " USD는 " << USD * NOK << " NOK입니다.\n"; break;
+        default: cout <<"단위를 알수없습니다 죄송합니다\n"; break;
+    }
+    return 0;
+}
+    */
+
+    
