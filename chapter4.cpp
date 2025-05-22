@@ -152,4 +152,53 @@ int main()
 }
     */
 
+//0부터 99까지의 각수와 그 제곱을 계산해 표로 출력
+/*
+int main ()
+{
+    int i =0;
+    while (i<100)
+    {
+        cout << i << '\t' << pow(i, 2) << '\n';
+        ++i;
+    }
+}
+    */
+
+//도전과제 문자 b는 char ('a'+1) 'c' char ('a'+2) 등으로 나타낼수있다. 루프를이용해
+//다음과 같이 알파벳 문자와 그에 해당하는 정수를 표로 출력해보자.
+//a 97      b 98        ... z 122
+
+//a부터z까지의 알파벳과 순서에 맞는 숫자들을 더해서 표로 출력
+/*
+int main()
+{
+    char ch;
+    while (ch <= 'z')
+    {
+        cout << ch << '\t' << static_cast<int>(ch) << endl;
+        ++ch;
+    }
+    return 0;
+}
+*/
+
+//도전과제 
+int main()
+{
+    for(char ch = 'a'; ch <= 'z'; ++ch )
+    {cout << ch << '\t' << static_cast<int>(ch) << endl;}
+    cout<<"------------------------------------"<<endl;
+
+    for(char ch ='A'; ch <= 'Z'; ++ch)
+    {cout << ch << '\t' << static_cast<int>(ch) << endl;}
+    cout<<"------------------------------------"<<endl;
+
+    for(char ch = '0'; ch <= '9'; ++ch)
+    {cout << ch << '\t' << static_cast<int>(ch)<<endl;}
+    cout<<"------------------------------------"<<endl;
+
+    return 0;
+}
+
     
