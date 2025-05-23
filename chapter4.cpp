@@ -184,6 +184,7 @@ int main()
 */
 
 //도전과제 
+/*
 int main()
 {
     for(char ch = 'a'; ch <= 'z'; ++ch )
@@ -200,5 +201,15 @@ int main()
 
     return 0;
 }
+*/
 
+//도전과제. 곱셈을 사용하지 않고 곱을 하는 프로그램을 만든후 첫번째 예제 만들기
+//건너뜀.... 씨벌 
+
+int main()
+{
+    vector<int> v = {5, 7, 9, 4, 6, 8};
+    for (int i=0; i<v.size(); ++i)
+    cout << v[i] <<'\n';
+}
     
